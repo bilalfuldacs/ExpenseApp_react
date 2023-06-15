@@ -10,7 +10,9 @@ function ExpenseDate(props) {
       <div className="expense-date__day ">
         {props.date.toLocaleDateString("en-Us", { day: "2-digit" })}
       </div>
-      <div className="expense-date__year ">{props.date.getFullYear()}</div>
+      <div className="expense-date__year ">
+        {props.date.getFullYear() || "N/A"}
+      </div>
     </div>
   );
 }
